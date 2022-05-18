@@ -1,0 +1,8 @@
+.collection .preview {
+	flex-flow: wrap;
+
+	.collection-item {
+		flex-grow: unset;
+		margin-bottom: 16px;
+	}
+}
