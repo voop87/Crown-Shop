@@ -11,28 +11,18 @@ import './CollectionPage.scss';
 const CollectionPage = ({ collections }) => {
 	const { collectionId } = useParams();
 
-	const COLLECTION_ID_MAP = {
-		hats: 1,
-		sneakers: 2,
-		jackets: 3,
-		womens: 4,
-		mens: 5
-	}
+	const collection = collections[collectionId];
 
-	const collection = collections.find(
-		collection => {
-			return collection.id === COLLECTION_ID_MAP[collectionId]
-		}
-	);
+	const { title, items } = collection;
 
 	return (
 		<div className="collection">
 			<h1 className="title">
-				{collection.title}
+				{title}
 			</h1>
-			<div className="preview">
+			<div className="items">
 				{
-					collection.items.map(item => {
+					items.map(item => {
 						return <CollectionItem key={item.id} item={item} />
 					})
 				}
