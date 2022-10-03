@@ -16,7 +16,7 @@ const StripeBtn = ({ price }) => {
 			name="CRWN Clothing Ltd."
 			billingAddress
 			shippingAddress
-			image="crown.svg"
+			image="./crown.svg"
 			description={`Your total is $${price}`}
 			amount={priceForStripe}
 			panelLabel="Pay Now"
